@@ -1,4 +1,4 @@
-export interface Root {
+export type Root = {
     meta: Meta;
     name: string;
     geometry_name: string;
@@ -9,21 +9,21 @@ export interface Root {
     outliner: Outliner[];
     textures: Texture[];
     animations: Animation[];
-}
+};
 
-export interface Meta {
+export type Meta = {
     format_version: string;
     creation_time: number;
     model_format: string;
     box_uv: boolean;
-}
+};
 
-export interface Resolution {
+export type Resolution = {
     width: number;
     height: number;
-}
+};
 
-export interface Element {
+export type Element = {
     name: string;
     rescale: boolean;
     locked: boolean;
@@ -34,74 +34,74 @@ export interface Element {
     origin: number[];
     faces: Faces;
     uuid: string;
-}
+};
 
-export interface Faces {
+export type Faces = {
     north: North;
     east: East;
     south: South;
     west: West;
     up: Up;
     down: Down;
-}
+};
 
-export interface North {
+export type North = {
     uv: number[];
     texture: number;
-}
+};
 
-export interface East {
+export type East = {
     uv: number[];
     texture: number;
-}
+};
 
-export interface South {
+export type South = {
     uv: number[];
     texture: number;
-}
+};
 
-export interface West {
+export type West = {
     uv: number[];
     texture: number;
-}
+};
 
-export interface Up {
+export type Up = {
     uv: number[];
     texture: number;
-}
+};
 
-export interface Down {
+export type Down = {
     uv: number[];
     texture: number;
-}
+};
 
-export interface Outliner {
+export type Outliner = {
     name: string;
     origin: number[];
     color: number;
     uuid: string;
-    "export": boolean;
+    'export': boolean;
     isOpen: boolean;
     locked: boolean;
     visibility: boolean;
     autouv: number;
     children: Children[];
-}
+};
 
-export interface Children {
+export type Children = {
     name: string;
     origin: number[];
     color: number;
     uuid: string;
-    "export": boolean;
+    'export': boolean;
     isOpen: boolean;
     locked: boolean;
     visibility: boolean;
     autouv: number;
     children: any[];
-}
+};
 
-export interface Texture {
+export type Texture = {
     path: string;
     name: string;
     folder: string;
@@ -115,9 +115,9 @@ export interface Texture {
     uuid: string;
     relative_path: string;
     source: string;
-}
+};
 
-export interface Animation {
+export type Animation = {
     uuid: string;
     name: string;
     loop: string;
@@ -130,25 +130,25 @@ export interface Animation {
     start_delay: string;
     loop_delay: string;
     animators: Animator[];
-}
+};
 
-export interface Animator {
+export type Animator = {
     name: string;
     type: string;
     keyframes: Keyframe[];
-}
+};
 
-export interface Keyframe {
+export type Keyframe = {
     channel: string;
     data_points: DataPoint[];
     uuid: string;
     time: number;
     color: number;
     interpolation: string;
-}
+};
 
-export interface DataPoint {
+export type DataPoint = {
     x: number;
     y: number;
     z: number;
-}
+};
