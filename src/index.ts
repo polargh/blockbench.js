@@ -1,1 +1,3 @@
-// base project init
+export function getFileName() {
+    return null
+}
